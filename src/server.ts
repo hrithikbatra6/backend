@@ -19,8 +19,8 @@ app.use(helmet());
 // CORS - Allow all origins in production (or specify your frontend URL)
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL === '*' ? '*' : process.env.FRONTEND_URL || 'http://localhost:8081',
-    credentials: true,
+    origin: '*', // Allow all origins for now (development)
+    credentials: false,
   })
 );
 
